@@ -1,0 +1,12 @@
+10
+이름	최종스테이지	점수
+asdf	4		2819
+sss	3		2216
+anny	6		2000
+asgj	2		1095
+ansdf	2		1081
+zxclvjk	2		1073
+asdklzf	2		1061
+asdfj	1		0
+hhh	1		0
+asdfasd	1		0

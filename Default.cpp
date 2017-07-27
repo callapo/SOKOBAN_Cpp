@@ -9,8 +9,8 @@ enum Color
 	BLACK, BLUE, GREEN, CYAN, RED, MAGENTA, BROWN, LIGHTGRAY, DARKGRAY, LIGHTBLUE, LIGHTGREEN, LIGHTCYAN, LIGHTRED, LIGHTMAGENTA, YELLOW, WHITE
 };
 
-unsigned int UserInfo::userNum = 0;
 void textcolor(Color text, Color background);
+void gotoxy(int x, int y);
 
 void Default()
 {
@@ -28,10 +28,22 @@ void Default()
 	//창 크기 설정 (고정)
 	system("mode con: cols=100 lines=30");
 
+	// 커서 지우기
+	CONSOLE_CURSOR_INFO cursorInfo = { 0 };
+	cursorInfo.dwSize = 1;
+	cursorInfo.bVisible = FALSE;
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
 }
 
 void textcolor(Color text, Color background)
 {
 	int color = text + background * 16;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+
+//출력커서의 위치 제어
+void gotoxy(int x, int y)
+{
+	COORD Pos = { (short)x, (short)y };
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Pos);
 }

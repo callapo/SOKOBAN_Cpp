@@ -69,24 +69,24 @@ void printInMenu(int buttonNo)
 	switch (buttonNo)
 	{
 	case 1:
-		cout << setw(4) << " ";
-		cout << "1. New game";
-		cout << setw(5) << " ";
-		break;
-	case 2:
-		cout << setw(4) << " ";
-		cout << "2. Continue";
-		cout << setw(5) << " ";
-		break;
-	case 3:
-		cout << setw(4) << " ";
-		cout << "3. Ranking";
+		cout << setw(3) << " ";
+		cout << "1. Continue";
 		cout << setw(6) << " ";
 		break;
+	case 2:
+		cout << setw(3) << " ";
+		cout << "2. Choose Stage";
+		cout << setw(2) << " ";
+		break;
+	case 3:
+		cout << setw(3) << " ";
+		cout << "3. Ranking";
+		cout << setw(7) << " ";
+		break;
 	case 4:
-		cout << setw(4) << " ";
+		cout << setw(3) << " ";
 		cout << "4. Exit game";
-		cout << setw(4) << " ";
+		cout << setw(5) << " ";
 		break;
 	}
 }
